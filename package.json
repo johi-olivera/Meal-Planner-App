@@ -1,7 +1,7 @@
 {
   "name": "meal-planner-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple yet flexible app to help you plan your weekly meals based on your household's preferences and routines.",
   "main": "./src/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

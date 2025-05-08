@@ -12,32 +12,69 @@ body {
   align-items: center;
 }
 
-.welcome-container,
-.plan-container {
-  text-align: center;
-  color: #ff4d7a;
-  text-shadow: 3px 3px 0 #fff;
-  font-size: 3rem;
+/* 🍽️ Plato */
+.welcome-container {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(4px);
+  box-shadow:                                 /* borde exterior blanco */
+    0 0 0 2px rgba(255, 255, 255, 0.6),   /* sombra exterior */
+    0 10px 25px #0000001a;                  /* sombra general */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   animation: fadeIn 1s ease-in-out;
+  padding: 2rem;
+  text-align: center;
+  z-index: 1;
 }
 
+.welcome-container::before {
+  content: '';
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.08);
+  z-index: 0;
+}
+
+.welcome-container > * {
+  z-index: 1; /* para que el texto quede encima del centro del plato */
+}
+
+/* 🎀 Texto */
 h1, h2 {
   font-family: 'Pacifico', cursive;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+  color: #ff4d7a;
+  text-shadow: 3px 3px 0 #fff;
 }
 
-h1 { font-size: 6rem; }
-h2 { font-size: 3rem; }
+h1 {
+  font-size: 4rem;
+  font-family: 'Cookie', cursive;
+}
+
+h2 {
+  font-size: 3rem;
+}
 
 .subtitle {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #c20030;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
+/* 🍓 Botón */
 button {
-  padding: 1.2rem 2rem;
-  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   background: #ffc5d3;
   color: #c20030;
@@ -53,23 +90,7 @@ button:hover {
   background: #ffdbdf;
 }
 
-.plan-box {
-  background: rgba(255, 255, 255, 0.9);
-  padding: 2rem 3rem;
-  border-radius: 20px;
-  box-shadow: 6px 6px 0 #c20030;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 400px;
-  width: 90%;
-}
-
-.plan-box button {
-  margin: 1rem 0;
-  width: 100%;
-}
-
+/* 🎬 Animación */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
