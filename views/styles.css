@@ -1,5 +1,60 @@
+html {
+  height: 100%;
+}
+
 body {
-    font-family: sans-serif;
-    padding: 20px;
-  }
-  
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-image: url('../assets/bg-mantel.png');
+  background-size: cover;
+  background-position: center;
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-container {
+  text-align: center;
+  color: #ff4d7a;
+  text-shadow: 3px 3px 0 #ffffff;
+  font-size: 3rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.subtitle {
+  font-size: 2rem;
+  color: #c20030;
+  margin-top: 2rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 10rem;
+  margin-bottom: 2rem;
+}
+
+button {
+  margin-top: 0;
+  padding: 2rem 3rem;
+  font-size: 2rem;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: #ffc5d3;
+  color: #c20030;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 5px 5px 0 #c20030;
+  transition: transform 0.1 ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: #ffdbdf;
+}

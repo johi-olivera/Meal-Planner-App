@@ -1,16 +1,18 @@
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
 
-function createWindow () {
+function createWindow() {
   const win = new BrowserWindow({
-    width: 800,
-    height: 600,
+    fullscreen: false,
     webPreferences: {
-      preload: path.join(__dirname, 'renderer.js') // src/renderer.js
+      preload: path.join(__dirname, 'renderer.js'),
+      nodeIntegration: true,
+      contextIsolation: false
     }
   });
 
-  // Cargar la vista principal desde views/pages
+  win.maximize();       // Maximiza la ventana
+  win.show();           // Muestra la ventana maximizada
   win.loadFile(path.join(__dirname, '../views/pages/index.html'));
 }
 
