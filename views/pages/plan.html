@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Planificador de comidas</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="plan-container">
+      <div class="plan-box">
+        <h2>¿Cómo querés planificar?</h2>
+        <button id="manualPlan">Elegir yo</button>
+        <button id="autoPlan">Sugerencia automática</button>
+      </div>
+    </div>
+  
+    <script>
+      document.getElementById("manualPlan").addEventListener("click", () => {
+        window.location.href = "manual.html";
+      });
+  
+      document.getElementById("autoPlan").addEventListener("click", () => {
+        window.location.href = "sugerencia.html";
+      });
+    </script>
+  </body>  
+
+</html>

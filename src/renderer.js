@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const startButton = document.getElementById('startButton');
   if (startButton) {
     startButton.addEventListener('click', () => {
-      window.location.href = './main.html';
+      window.location.href = './plan.html';
     });
   }
 });
